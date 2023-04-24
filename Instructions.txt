@@ -1,0 +1,22 @@
+1. Config File (config.json):
+- This file contains the API keys and secrets for the brokers you want to use. You will need to fill in the appropriate values for the YOUR_API_KEY, YOUR_API_SECRET, YOUR_CLIENT_ID, and YOUR_CONSUMER_KEY placeholders.
+- The file also contains the necessary URLs for authentication and token refresh, as well as the required headers and parameters for each broker.
+- If you want to use additional brokers or change the configuration, you can modify this file accordingly.
+
+2. Etrade Authentication Script (etrade_auth.py):
+- This script handles the authentication process for Etrade API.
+- It includes a function called get_etrade_session() which you can use to get an authenticated session object that you can use to make API requests.
+
+3. TD Ameritrade Authentication Script (td_auth.py):
+- This script handles the authentication process for TD Ameritrade API.
+- It includes a function called get_td_session() which you can use to get an authenticated session object that you can use to make API requests.
+
+4. Flask App (app.py):
+- This is where you will write your trading strategy using the Flask framework.
+- You can import the etrade_auth.py and td_auth.py scripts and use their get_etrade_session() and get_td_session() functions to get authenticated session objects that you can use to make API requests.
+- You can use the config.json file to configure your API keys and secrets for each broker you want to use.
+- You can create endpoints in your Flask app that will handle Tradingview strategy webhooks and send simple market orders to the brokers using the API sessions.
+
+- pip install Flask
+- pip install requests_oauthlib
+- pip install -r requirements.txt

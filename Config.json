@@ -1,0 +1,44 @@
+{
+    "etrade": {
+        "api_key": "fbefe599f1e2cc9d876c0d0a0588a1be",
+        "api_secret": "ffb31c1be6a32ae5992ee6 aea5c4b32cf9ab4736eeec1ce90cc db78c4afc33eb",
+        "token_url": "https://api.etrade.com/oauth/request_token",
+        "access_token_url": "https://api.etrade.com/oauth/access_token",
+        "authorize_url": "https://us.etrade.com/e/t/user/login",
+        "callback_url": "http://localhost:5000/callback",
+        "headers": {
+            "oauth_consumer_key": "fbefe599f1e2cc9d876c0d0a0588a1be",
+            "oauth_signature_method": "HMAC-SHA1",
+            "oauth_timestamp": "",
+            "oauth_nonce": "",
+            "oauth_version": "1.0",
+            "oauth_callback": "http://localhost:5000/callback"
+        },
+        "params": {
+            "oauth_consumer_key": "fbefe599f1e2cc9d876c0d0a0588a1be",
+            "oauth_token": "",
+            "oauth_nonce": "",
+            "oauth_timestamp": "",
+            "oauth_signature_method": "HMAC-SHA1",
+            "oauth_version": "1.0"
+        },
+        "token_refresh_interval": 1800
+    },
+    "td_ameritrade": {
+        "consumer_key": "YOUR_CONSUMER_KEY",
+        "redirect_uri": "http://localhost:5000/callback",
+        "token_url": "https://api.tdameritrade.com/v1/oauth2/token",
+        "authorization_url": "https://auth.tdameritrade.com/auth",
+        "client_id": "YOUR_CLIENT_ID",
+        "refresh_token": "",
+        "access_token": "",
+        "headers": {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        "params": {
+            "grant_type": "refresh_token",
+            "refresh_token": ""
+        },
+        "token_refresh_interval": 1800
+    }
+}
