@@ -23,12 +23,12 @@ class TDAuth:
 
     def get_auth_headers(self):
         return {
-            "Authorization": f"Bearer {self.config['access_token']}"
+            "Authorization": f"Bearer {self.config['td_ameritrade']['access_token']}"
         }
 
     def get_access_token(self):
         response = requests.post(
-            self.config['token_url'],
+            self.config['td_ameritrade']['token_url'],
             headers={
                 "Content-Type": "application/x-www-form-urlencoded"
             },

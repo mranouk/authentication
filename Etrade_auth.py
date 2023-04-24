@@ -19,10 +19,10 @@ class EtradeAuth:
 
     def get_oauth(self):
         return OAuth1(
-            self.config['api_key'],
-            client_secret=self.config['api_secret'],
-            resource_owner_key=self.config['params']['oauth_token'],
-            resource_owner_secret=self.config['params']['oauth_token_secret']
+            self.config['etrade']['api_key'],
+            client_secret=self.config['etrade']['api_secret'],
+            resource_owner_key=self.config['etrade']['params']['oauth_token'],
+            resource_owner_secret=self.config['etrade']['params']['oauth_token_secret']
         )
 
     def get_access_token(self):
@@ -44,7 +44,7 @@ class EtradeAuth:
 
     def get_request_token(self):
         response = requests.post(
-            self.config['token_url'],
+            self.config['td_ameritrade']['token_url'],
             auth=self.get_oauth()
         )
 

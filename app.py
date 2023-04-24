@@ -31,7 +31,7 @@ def etrade_token():
 
 @app.route('/tdameritrade-auth')
 def tdameritrade_authenticate():
-    auth_url = td_auth.get_auth_url()
+    auth_url = td_auth.get_authorization_url()
     return render_template('tdameritrade-auth.html', auth_url=auth_url)
 
 @app.route('/tdameritrade-token')
